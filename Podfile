@@ -3,11 +3,19 @@ platform :ios, '13.0'
 
 inhibit_all_warnings!
 
+def rx_swift
+    pod 'RxSwift', '~> 6.5.0'
+end
+
+def rx_cocoa
+    pod 'RxCocoa', '~> 6.5.0'
+end
+
 target 'CleanArchitecture' do
   use_frameworks!
 
-  pod 'RxSwift', '~> 6.5.0'
-  pod 'RxCocoa', '~> 6.5.0'
+  rx_swift
+  rx_cocoa
   pod 'QueryKit'
 
 end
@@ -15,14 +23,14 @@ end
 target 'Domain' do
   use_frameworks!
 
-  pod 'RxSwift', '~> 6.5.0'
+  rx_swift
 
 end
 
 target 'CoreDataPlatform' do
   use_frameworks!
 
-  pod 'RxSwift', '~> 6.5.0'
+  rx_swift
   pod 'QueryKit'
 
 end
