@@ -81,6 +81,9 @@
 		92E7C4682816D5B000937FC9 /* CreatePostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7C4672816D5B000937FC9 /* CreatePostVM.swift */; };
 		92E7C46A2816D6A100937FC9 /* CreatePostNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7C4692816D6A100937FC9 /* CreatePostNavigator.swift */; };
 		92E7C46C281712ED00937FC9 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7C46B281712EC00937FC9 /* CreatePostVC.swift */; };
+		92E7C46F2817CC9700937FC9 /* EditPostNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7C46E2817CC9700937FC9 /* EditPostNavigator.swift */; };
+		92E7C4712817CD0E00937FC9 /* EditPostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7C4702817CD0E00937FC9 /* EditPostVM.swift */; };
+		92E7C4732817F65500937FC9 /* EditPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E7C4722817F65400937FC9 /* EditPostVC.swift */; };
 		A348715BA3793E377AC3D64C /* Pods_CoreDataPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA79CDBECFC9AA16A518A37 /* Pods_CoreDataPlatform.framework */; };
 		A8CDC621D7E08348F1E3A50A /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA0481706D10E40E8D95F99 /* Pods_Domain.framework */; };
 		FDC677C27A80CCA14017C036 /* Pods_CleanArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA6E249FA3BDB9E01FA5099 /* Pods_CleanArchitecture.framework */; };
@@ -198,6 +201,9 @@
 		92E7C4672816D5B000937FC9 /* CreatePostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVM.swift; sourceTree = "<group>"; };
 		92E7C4692816D6A100937FC9 /* CreatePostNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostNavigator.swift; sourceTree = "<group>"; };
 		92E7C46B281712EC00937FC9 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
+		92E7C46E2817CC9700937FC9 /* EditPostNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostNavigator.swift; sourceTree = "<group>"; };
+		92E7C4702817CD0E00937FC9 /* EditPostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostVM.swift; sourceTree = "<group>"; };
+		92E7C4722817F65400937FC9 /* EditPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostVC.swift; sourceTree = "<group>"; };
 		9EA79CDBECFC9AA16A518A37 /* Pods_CoreDataPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoreDataPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1C2C49F98C4333B0E2963F /* Pods-CleanArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanArchitecture.release.xcconfig"; path = "Target Support Files/Pods-CleanArchitecture/Pods-CleanArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		B0705F54E60BFB9FEB73660D /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
@@ -332,6 +338,7 @@
 		92E7C3DD28153F5800937FC9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				92E7C46D2817CC7900937FC9 /* EditPost */,
 				92E7C4662816D59900937FC9 /* CreatePost */,
 				92E7C3F8281542A200937FC9 /* AllPosts */,
 			);
@@ -489,6 +496,16 @@
 				92E7C4692816D6A100937FC9 /* CreatePostNavigator.swift */,
 			);
 			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		92E7C46D2817CC7900937FC9 /* EditPost */ = {
+			isa = PBXGroup;
+			children = (
+				92E7C46E2817CC9700937FC9 /* EditPostNavigator.swift */,
+				92E7C4702817CD0E00937FC9 /* EditPostVM.swift */,
+				92E7C4722817F65400937FC9 /* EditPostVC.swift */,
+			);
+			path = EditPost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -733,6 +750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E7C4712817CD0E00937FC9 /* EditPostVM.swift in Sources */,
 				92E7C46C281712ED00937FC9 /* CreatePostVC.swift in Sources */,
 				92E7C4682816D5B000937FC9 /* CreatePostVM.swift in Sources */,
 				92E7C4652816C23600937FC9 /* PostTVC.swift in Sources */,
@@ -747,8 +765,10 @@
 				92E7C45F28157A4E00937FC9 /* ActivityIndicator.swift in Sources */,
 				92E7C3A82815393600937FC9 /* AppDelegate.swift in Sources */,
 				92E7C46A2816D6A100937FC9 /* CreatePostNavigator.swift in Sources */,
+				92E7C4732817F65500937FC9 /* EditPostVC.swift in Sources */,
 				92E7C3FA281542B700937FC9 /* PostsVC.swift in Sources */,
 				92E7C3AA2815393600937FC9 /* SceneDelegate.swift in Sources */,
+				92E7C46F2817CC9700937FC9 /* EditPostNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

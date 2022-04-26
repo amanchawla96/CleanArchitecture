@@ -50,6 +50,11 @@ class DefaultPostsNavigator: PostsNavigator {
     }
     
     func toPost(_ post: Post) {
+        let navigator = DefaultEditPostNavigator(navigationController: navigationController)
+        let viewModel = EditPostVM(post: post, useCase: useCaseProvider.makePostsUseCase(), navigator: navigator)
+        let controller = EditPostVC()
+        controller.viewModel = viewModel
+        navigationController.pushViewController(controller, animated: true)
         
     }
 }
